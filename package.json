@@ -1,0 +1,24 @@
+{
+  "name": "favoritespokedex",
+  "version": "1.0.0",
+  "description": "Pokemon favorito",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Astridp85/Listado-pokemon-favorito.git"
+  },
+  "keywords": [
+    "sessionStorage",
+    "HTML5",
+    "PokeAPI"
+  ],
+  "author": "Astrid Piñero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Astridp85/Listado-pokemon-favorito/issues"
+  },
+  "homepage": "https://github.com/Astridp85/Listado-pokemon-favorito#readme"
+}
