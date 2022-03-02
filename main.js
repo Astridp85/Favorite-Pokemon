@@ -19,7 +19,9 @@ const searchButton = document.querySelector(".search"),
 
 let favoritesListPokemon = {};
 
-var pokeName, pokemon, card;
+var pokeName, 
+pokemon, 
+card;
 
 const requestPokeInfo = (url, name) => {
   fetch(url + name)
@@ -33,25 +35,16 @@ const requestPokeInfo = (url, name) => {
 const createCard = () => {
   card = `
       <div class="pokemon-picture">
-      <img class="pokemon-picture-img" src="${
-        pokemon.sprites.front_default
-      }" id="${pokemon.id}" alt="Sprite of ${pokemon.name}">
+      <img class="pokemon-picture-img" src="${pokemon.sprites.front_default}" id="${pokemon.id}" alt="Sprite of ${pokemon.name}">
       </div>
       <div class="pokemon-info">
           <h1 class="name" id="${pokemon.name}">Name: ${pokemon.name}</h1>
           <h2 class="numberId">Nº ${pokemon.id}</h2>
-          <h3 class="type">Type: ${pokemon.types
-            .map((item) => item.type.name)
-            .toString()}</h3>
-          <h3 class="skill">Skills: ${pokemon.moves
-            .map((item) => " " + item.move.name)
-            .toString()}</h3>
+          <h3 class="type">Type: ${pokemon.types.map((item) => item.type.name).toString()}</h3>
+          <h3 class="skill">Skills: ${pokemon.moves.map((item) => " " + item.move.name).toString()}</h3>
           <h3 class="weight">Weight: ⚖️${pokemon.weight / 10}kg</h3>
           <h3 class="height">Height: 📏${pokemon.height / 10}m</h3>
-          <button type="button" class="button is-danger" id="${
-            pokemon.id
-          }"><i class="fas fa-thumbs-up"></i> Favorite
-          </button>
+          <button type="button" class="button is-danger" id="${pokemon.id}"><i class="fas fa-thumbs-up"></i> Favorite</button>
       </div>`;
 
   return card;
@@ -105,7 +98,7 @@ const setFavoritos = (obj) => {
   };
   favoritesListPokemon[pokemonFav.id] = { ...pokemonFav };
   paintFavoriteList();
-  // savedFav();
+
 };
 
 // delete favorite Pokemon
@@ -129,8 +122,8 @@ const btnAccion = () => {
 // paint Favoritos
 const paintFavoriteList = () => {
   cardFav = "";
-
-  cardFav += '<div class="card" style="width: 18rem;">';
+  cardFav += '<div class="card-group">'
+  cardFav += '<div class="card">';
   Object.values(favoritesListPokemon).forEach((pokemonFav) => {
     cardFav += `<img class="card-img-top" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonFav.id}.png" alt="Sprite of ${pokemonFav.name}">`;
     cardFav += `<div class="card-body">`;
@@ -139,6 +132,7 @@ const paintFavoriteList = () => {
     cardFav += `<button type="button" class="btn btn-danger" id="${pokemonFav.id}"><i class=" fas fa-trash-alt"></i> Delete </button>`;
     cardFav += `</div>`;
   });
+  cardFav += "</div>";
   cardFav += "</div>";
 
   containerFavorites.innerHTML = cardFav;

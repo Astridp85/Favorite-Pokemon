@@ -190,26 +190,14 @@ body {
     opacity: 1;
   }
 }
-/* .container-favorite{
-
-  gap: 30px;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+.container-favorite{
+  width: 30%;
   margin-bottom: 40px;
   margin-top: 20px;
-} */
+ 
+} 
 .card-body{
   background-color: #ffc4126b;
 }
-.favoritelist {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-gap: 10px;
-}
-.card{
-  display: inline-grid;
-}
-
 
 
