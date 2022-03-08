@@ -30,5 +30,5 @@ The stored data is kept in sessionStorages, which will be available even if the 
 
 ## 4. Final Product
 ![Principal](https://user-images.githubusercontent.com/76055558/157291141-96fa3a73-38b6-4072-91ee-2b2f0e49bf74.png)
-![Pokemon](image/Show-Pokemon.png.png)
+![Pokemon](https://user-images.githubusercontent.com/76055558/157291384-d44f46ee-6b03-4801-ab62-6abd1762c2c7.png)
 ![Favorite](image/Select-Favorite.png)
