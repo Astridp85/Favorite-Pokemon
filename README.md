@@ -29,6 +29,6 @@ Additionally you can delete pokemon one by one and add other favorites or you ca
 The stored data is kept in sessionStorages, which will be available even if the page is refreshed.
 
 ## 4. Final Product
-![Principal](image/Principal.png)
+![Principal](https://user-images.githubusercontent.com/76055558/157291141-96fa3a73-38b6-4072-91ee-2b2f0e49bf74.png)
 ![Pokemon](image/Show-Pokemon.png.png)
 ![Favorite](image/Select-Favorite.png)
